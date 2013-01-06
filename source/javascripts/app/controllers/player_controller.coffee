@@ -21,7 +21,6 @@ App.PlayerController = Ember.ObjectController.extend
   reset: ->
     @setProperties
       isPlaying: false
-      isPaused: false
       position: 0
       duration: 0
       bytesLoaded: 0
@@ -34,7 +33,6 @@ App.PlayerController = Ember.ObjectController.extend
       @playNewEpisode(episode)
 
   resume: ->
-    @set('isPaused', false)
     @set('isPlaying', true)
     @sound.play()
 
@@ -65,5 +63,4 @@ App.PlayerController = Ember.ObjectController.extend
   pause: (episode) ->
     @sound.pause() if @sound
     @set 'isPlaying', false
-    @set 'isPaused', true
 
