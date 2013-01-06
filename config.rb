@@ -6,20 +6,16 @@ activate :livereload
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
-set :waveforms_dir, 'waveforms'
 
 page "/error.html", layout: "error"
 
 configure :build do
-  require "middleman-smusher"
-
   ignore "stylesheets/app/*"
   ignore "javascripts/vendor/*"
   ignore "javascripts/app/*"
 
   activate :minify_css
   activate :minify_javascript
-  activate :smusher
   activate :asset_hash
 end
 
