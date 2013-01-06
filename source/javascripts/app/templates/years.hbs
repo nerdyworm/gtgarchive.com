@@ -1,0 +1,7 @@
+<ul class="nav nav-pills">
+  {{#each year in App.years}}
+  <li>{{#linkTo episodesByYear year currentWhen="episodesByYear"}}{{year.name}}{{/linkTo}}</a></li>
+  {{/each}}
+</ul>
+
+<hr />

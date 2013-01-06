@@ -1,0 +1,5 @@
+{{view App.YearsView}}
+
+{{#each episode in filtered}}
+  {{view App.EpisodeView episodeBinding="episode"}}
+{{/each}}

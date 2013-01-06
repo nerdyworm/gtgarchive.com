@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="masthead">
+    <ul class="nav nav-pills pull-right">
+      <li>{{#linkTo home currentWhen="home"}}Home{{/linkTo}}</li>
+      <li>{{#linkTo about currentWhen="about"}}About{{/linkTo}}</li>
+    </ul>
+    <h3 class="muted">GTG Archives</h3>
+  </div>
+
+  {{view App.PlayerView controllerBinding="playerController"}}
+
+  <hr>
+  {{outlet}}
+  <hr>
+</div>

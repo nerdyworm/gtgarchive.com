@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title><%= data.page.title || "GTG Archive" %></title>
+  <%= stylesheet_link_tag "app" %>
+</head>
+<body>
+<%= yield %>
+<%= javascript_include_tag  "vendor" %>
+<%= javascript_include_tag  "app" %>
+</body>
+</html>

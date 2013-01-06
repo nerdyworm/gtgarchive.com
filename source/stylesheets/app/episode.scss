@@ -1,0 +1,45 @@
+.episode {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.episode .content {
+  padding: 30px;
+}
+
+.episode h1 {
+  margin: 0px;
+  color: #666;
+}
+
+.episode a:hover {
+  text-decoration: none;
+}
+
+.episode .lead {
+  margin-bottom: 0px;
+}
+
+.episode .actions a {
+  margin: 0px 10px;
+}
+
+.episode .waveform-view img {
+  display: none;
+}
+
+.episode.in .waveform-view img {
+  display: block;
+}
+
+.episode .waveform-view .background {
+  background-color: #ffffff;
+
+  -webkit-transition: background-color 800ms ease;
+  -moz-transition: background-color 800ms ease;
+  transition: background-color 800ms ease;
+}
+
+.episode.in .waveform-view .background {
+  background-color: #efefef;
+}

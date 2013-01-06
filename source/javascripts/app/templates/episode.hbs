@@ -1,0 +1,20 @@
+<div class="episode">
+  {{view App.WaveformView episodeBinding="episode"}}
+
+  <div class="content">
+    <h1> {{episode.artist}} </h1>
+    <p class="lead">
+      {{episode.title}}
+      <span class="muted">{{episode.date}}</span>
+      <span class="actions pull-right">
+        {{#if episode.isPlaying}}
+        <a {{action pause episode}} href="#">Pause</a>
+        {{else}}
+        <a {{action play episode}} href="#">Play</a>
+        {{/if}}
+        /
+        <a {{bindAttr href="episode.download"}}>Download</a>
+      </span>
+    </p>
+  </div>
+</div>

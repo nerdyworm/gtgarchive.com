@@ -1,0 +1,59 @@
+//= require app/bootstrap
+//= require_self
+//= require_tree ./app/
+
+body {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.jumbotron {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 72px;
+  line-height: 1;
+}
+
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+.nav-pills a.active {
+  color: #ffffff;
+  background-color: #0088cc;
+}
+
+.nav-pills a.active:hover {
+  color: #ffffff;
+  background-color: #0088cc;
+}
+
+.nav-tabs a.active {
+  color: #555555;
+  cursor: default;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
+
+.nav-tabs a.active:hover {
+  color: #555555;
+  background-color: #ffffff;
+  border-bottom-color: transparent;
+}
+
+.navbar.navbar-fixed-bottom .navbar-inner {
+  background: #ffffff;
+  background-image: none;
+
+  .brand {
+    padding-right: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

@@ -1,0 +1,51 @@
+.waveform-view {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+  cursor: col-resize;
+}
+
+.waveform-view .overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.waveform-view .background {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: #efefef;
+}
+
+.waveform-view .loaded {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #e0e0e0;
+  height: 100%;
+}
+
+.waveform-view .progress {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: blue;
+  height: 100%;
+  background-color: #faa732;
+  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
+  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
+  background-image: -o-linear-gradient(top, #fbb450, #f89406);
+  background-image: linear-gradient(to bottom, #fbb450, #f89406);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffbb450', endColorstr='#fff89406', GradientType=0);
+}
+

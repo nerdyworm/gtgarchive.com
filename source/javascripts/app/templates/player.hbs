@@ -1,0 +1,25 @@
+{{#if controller.content}}
+<div class="navbar navbar-fixed-bottom">
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="row">
+        <div class="span2">
+          <a class="brand" href="#">{{artist}}</a>
+        </div>
+        <div class="span8">
+          <div style="position: relative; height: 40px; z-index: 1;">
+            {{view App.WaveformView episodeBinding="controller.content"}}
+          </div>
+        </div>
+        <div class="span2">
+          {{#if isPlaying}}
+          <a {{action pause content}} href="#" class="brand" style="float: right">Pause</a>
+          {{else}}
+          <a {{action play content}} href="#" class="brand" style="float: right">Play</a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
