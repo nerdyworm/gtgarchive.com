@@ -1,3 +1,5 @@
+isEqual = Ember.isEqual
+
 App.PlayerController = Ember.ObjectController.extend
   content: null
 
@@ -8,7 +10,7 @@ App.PlayerController = Ember.ObjectController.extend
   stopOtherEpisodes: (episode) ->
     content = @get 'content'
     return unless content
-    unless Ember.isEqual(content, episode) then @stop()
+    unless isEqual(content, episode) then @stop()
 
   stop: ->
     if @sound
@@ -26,6 +28,17 @@ App.PlayerController = Ember.ObjectController.extend
       bytesTotal: 0
 
   playEpisode: (episode) ->
+    if isEqual(@get('content'), episode)
+      @resume()
+    else
+      @playNewEpisode(episode)
+
+  resume: ->
+    @set('isPaused', false)
+    @set('isPlaying', true)
+    @sound.play()
+
+  playNewEpisode: (episode) ->
     @set 'content', episode
     @reset()
     @sound = soundManager.createSound(@soundOptions())
