@@ -2,13 +2,14 @@
 
 - Middleman
 - Ember.js
-- CoffeeScript
 
 # Building
 
 First install the dependencies via bundler.
 
     bundle install
+
+Then build the site using middleman.
 
     middleman build
 
