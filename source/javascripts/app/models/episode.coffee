@@ -1,5 +1,9 @@
 App.Episode = Ember.Object.extend
+  isPlaying: false
   position: 0
+  duration: 0
+  bytesLoaded: 0
+  bytesTotal: 0
 
   waveform: Ember.computed ->
     "http://gtgarchive.com/waveforms/#{@get('id')}.png"
@@ -14,7 +18,3 @@ App.Episode = Ember.Object.extend
     if Ember.isEmpty(part2) then @get('part1') else part2
   .property 'part1', 'part2'
 
-  # XXX - here?
-  jump: (float) ->
-    sound = @get 'sound'
-    sound.setPosition(float * sound.durationEstimate)

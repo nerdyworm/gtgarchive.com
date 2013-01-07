@@ -40,7 +40,6 @@ App.PlayerController = Ember.ObjectController.extend
     @set 'content', episode
     @reset()
     @sound = soundManager.createSound(@soundOptions())
-    @set 'content.sound', @sound
     @sound.play()
     @set 'isPlaying', true
 
@@ -64,3 +63,5 @@ App.PlayerController = Ember.ObjectController.extend
     @sound.pause() if @sound
     @set 'isPlaying', false
 
+  jump: (float) ->
+    @sound.setPosition(float * @sound.durationEstimate)
