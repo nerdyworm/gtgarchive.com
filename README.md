@@ -2,8 +2,9 @@
 
 http://gtgarchive.com/
 
-- Middleman
-- Ember.js
+# Built with
+- http://middlemanapp.com/
+- http://emberjs.com/
 
 # Building
 
