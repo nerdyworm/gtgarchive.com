@@ -3,4 +3,4 @@ App.YearsController = Ember.ArrayController.extend
   content: App.years
   latest: Ember.computed ->
     @get('firstObject')
-  .property "@each", 'thing'
+  .property "@each"
